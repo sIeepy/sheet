@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem "rails"
 
 gem "annotate"
-gem "bootstrap-sass"
+gem 'bootstrap-sass'
 gem "decent_decoration"
 gem "decent_exposure"
 gem "devise"
