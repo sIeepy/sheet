@@ -1,0 +1,30 @@
+%table.table
+  %thead
+    %tr
+      %th
+        Lp
+      %th
+        Date
+      %th
+        Category
+      %th
+        Description
+      %th
+        Outcome
+      %th
+        Name
+  %tbody
+    - outcomes.each_with_index do |out, i|
+      %tr
+        %td
+          = i + 1
+        %td
+          = out.outcome_date
+        %td
+          = out.category
+        %td
+          = out.description
+        %td
+          = out.outcome_money
+        %td
+          = out.user.email

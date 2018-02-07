@@ -15,7 +15,7 @@ gem "sqlite3"
 gem "uglifier"
 gem 'simple_form'
 gem 'sprockets'
-
+gem 'validates_timeliness'
 
 group :development do
   gem "better_errors"

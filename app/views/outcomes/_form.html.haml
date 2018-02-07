@@ -1,0 +1,7 @@
+= simple_form_for outcome do |f|
+  = f.input :outcome_money
+  = f.input :outcome_date
+  = f.input :description
+  = f.input :category, collection: outcome.decorate.categories, selected: 1
+  .text-center
+    = f.button :submit
