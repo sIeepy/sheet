@@ -6,4 +6,8 @@ FactoryBot.define do
     description { Faker::Lorem.sentence }
     user
   end
+
+  factory :invalid_outcome, parent: :outcome do
+    outcome_money nil
+  end
 end

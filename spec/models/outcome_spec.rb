@@ -6,11 +6,7 @@ RSpec.describe Outcome, type: :model do
   it { is_expected.to validate_presence_of(:category) }
   it { is_expected.to validate_presence_of(:outcome_date) }
   it { is_expected.to validate_numericality_of(:outcome_money) }
-  it { is_expected.to validates_date(:outcome_date).is_at Date.current }
-  #
-  # it 'should create post only on or before current date' do
-  #   @older_outcome = create(:outcome, outcome_date: 1.day.ago)
-  #   @today_outcome = create(:outcome, outcome_date: Date.current)
-  #   expect(Outcome.all).to eq [@older_outcome, @today_outcome]
-  # end
+  it { is_expected.to_not allow_value(Date.current + 1).for(:outcome_date) }
+  it { is_expected.to allow_value(Date.current).for(:outcome_date) }
+  it { is_expected.to allow_value(2.days.ago).for(:outcome_date) }
 end
