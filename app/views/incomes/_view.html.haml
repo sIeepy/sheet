@@ -10,21 +10,21 @@
       %th
         Description
       %th
-        Outcome
+        Income
       %th
         Name
   %tbody
-    - outcomes.each_with_index do |out, i|
+    - incomes.each_with_index do |inc, i|
       %tr
         %td
           = i + 1
         %td
-          = out.outcome_date
+          = inc.income_money
         %td
-          = out.category
+          = inc.category
         %td
-          = out.description
+          = inc.description
         %td
-          = out.outcome_money
+          = inc.income_money
         %td
-          = out.user.name
+          = inc.user.name

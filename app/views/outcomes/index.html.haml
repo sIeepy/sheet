@@ -1,8 +1,9 @@
-.col-sm-10.js-outcome-container
-  .js-outcome-btn-add.text-center
-    = button_tag 'Add outcome'
-  .text-center.js-outcome-btn-rm{ class: ('hidden') }
-    = button_tag 'Close form'
-  .js-outcome-form{ class: ('hidden') }
-    = render 'outcomes/form'
+- if user_signed_in?
+  .col-sm-10.js-outcome-container
+    .js-outcome-btn-add.text-center
+      = button_tag 'Add outcome'
+    .text-center.js-outcome-btn-rm{ class: ('hidden') }
+      = button_tag 'Close form'
+    .js-outcome-form{ class: ('hidden') }
+      = render 'outcomes/form'
 = render 'outcomes/view'

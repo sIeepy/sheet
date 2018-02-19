@@ -1,0 +1,9 @@
+- if user_signed_in?
+  .col-sm-10.js-income-container
+    .js-income-btn-add.text-center
+      = button_tag 'Add income'
+    .text-center.js-income-btn-rm{ class: ('hidden') }
+      = button_tag 'Close form'
+    .js-income-form{ class: ('hidden') }
+      = render 'incomes/form'
+= render 'incomes/view'

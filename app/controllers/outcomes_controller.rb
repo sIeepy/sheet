@@ -7,7 +7,7 @@ class OutcomesController < ApplicationController
     if outcome.save
       redirect_to outcomes_path, notice: 'Outcome added'
     else
-      redirect_to outcomes_path, error: 'Outcome not added'
+      redirect_to outcomes_path
     end
   end
 

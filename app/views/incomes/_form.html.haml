@@ -1,0 +1,7 @@
+= simple_form_for income do |f|
+  = f.input :income_money
+  = f.input :income_date
+  = f.input :description
+  = f.input :category, collection: income.decorate.categories, selected: 1
+  .text-center
+    = f.button :submit
