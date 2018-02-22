@@ -11,6 +11,11 @@ class OutcomesController < ApplicationController
     end
   end
 
+  def import
+    Outcome.import(params[:file])
+    redirect_to outcomes_path, notice: 'Succesfully imported'
+  end
+
   private
 
   def outcome_params
