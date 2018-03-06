@@ -9,7 +9,6 @@ class Outcome < ApplicationRecord
 
   def self.import(file)
     CSV.foreach(file.path, headers: true) do |row|
-      binding.pry
       rower = row.to_hash
       rower.store('user_id', User.current.id)
       Outcome.create! rower
